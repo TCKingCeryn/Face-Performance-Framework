@@ -3,6 +3,9 @@ Unity Animation library for Facial Blendshape performance capture, based on the 
 
 
 
+## Changelog
+Current Version: v1.0
+
 ## Licenses
 Includes an open source modified fork of FaceSync, found here: https://github.com/joscanper/unity_facesync
 
