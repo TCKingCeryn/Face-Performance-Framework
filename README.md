@@ -1,4 +1,4 @@
-# Face-Performance-Animation-Library
+# Face Performance Framework
 Unity Animation library for Facial Blendshape performance capture, based on the 52-blendshape FACS system.
 
 
