@@ -1,6 +1,7 @@
 # Face Performance Framework
 Unity Animation library for Facial Blendshape performance capture, based on the 52-blendshape FACS system.
 
+![](https://github.com/joscanper/untiy_facesync/blob/master/FaceSync/Demo/example.png)
 
 
 ## Changelog
