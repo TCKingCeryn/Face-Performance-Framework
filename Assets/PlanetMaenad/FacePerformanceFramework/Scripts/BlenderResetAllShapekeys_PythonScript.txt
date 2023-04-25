@@ -1,0 +1,4 @@
+import bpy
+
+for skey in bpy.context.object.data.shape_keys.key_blocks:
+    skey.value = 0.0

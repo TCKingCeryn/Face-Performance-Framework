@@ -1,0 +1,59 @@
+﻿using UnityEngine;
+using System.Collections.Generic;
+
+#if UNITY_EDITOR
+
+using UnityEditor;
+
+#endif // UNITY_EDITOR
+
+using System;
+
+namespace FaceSync
+{
+	[Serializable]
+	[CreateAssetMenu(fileName = "Settings", menuName = "PlanetMaenad/FaceSync/Settings")]
+	public class FaceSyncSettings : ScriptableObject
+	{
+#if UNITY_EDITOR
+		public FaceSyncDetectionRules[] DetectionRules;
+
+		private static FaceSyncSettings mSettings;
+
+		public static FaceSyncSettings GetSettings()
+		{
+			if (mSettings)
+			{
+				return mSettings;
+			}
+
+			string path = "Assets/PlanetMaenad/FacePerformanceFramework/FaceSync/Data/Settings.asset";
+
+			mSettings = AssetDatabase.LoadAssetAtPath(path, typeof(FaceSyncSettings)) as FaceSyncSettings;
+
+			if (mSettings == null)
+			{
+				mSettings = CreateInstance<FaceSyncSettings>();
+
+				FaceSyncUtils.CreateAssetWithPath(mSettings, path);
+			}
+
+			return mSettings;
+		}
+
+#endif // UNITY_EDITOR
+
+		public Dictionary<string, FaceSyncBlendSet> GetHashedRules()
+		{
+			Dictionary<string, FaceSyncBlendSet> ruleDict = new Dictionary<string, FaceSyncBlendSet>();
+			foreach (FaceSyncDetectionRules rules in DetectionRules)
+			{
+				foreach (FaceSyncDetectionRules.RuleEntry entry in rules.Rules)
+				{
+					ruleDict.Add(entry.Identifier, entry.Set);
+				}
+			}
+			return ruleDict;
+		}
+	}
+}
