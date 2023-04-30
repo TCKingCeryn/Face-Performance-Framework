@@ -1,5 +1,8 @@
 # Face Performance Framework
-Unity Animation library for Facial Blendshape performance capture, based on the 52-blendshape FACS system.
+Unity Animation library for Facial Blendshape performance capture, based on the 52-blendshape FACS naming system:
+
+https://developer.apple.com/documentation/arkit/arfaceanchor/blendshapelocation
+
 
 Allows for layering of procedural Blendshape animation, on top of keyframed values.  Also generates Lipsync sequences with customizable Phoneme sets.
 
