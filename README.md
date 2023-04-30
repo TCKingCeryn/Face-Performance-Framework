@@ -5,7 +5,7 @@ https://developer.apple.com/documentation/arkit/arfaceanchor/blendshapelocation
 
 Allows for layering of procedural Blendshape animation, on top of keyframed values.  Also generates Lipsync sequences with customizable Phoneme sets.
 
-![asdasdas](https://user-images.githubusercontent.com/128671881/234283668-a348ddff-afcd-4124-9eb5-4ad77f378f69.PNG)
+![2023_04_30_01_24_38](https://user-images.githubusercontent.com/128671881/235343509-2b2ad786-0edb-4b11-99e6-6c786b689709.gif)
 
 ![](https://github.com/joscanper/untiy_facesync/blob/master/FaceSync/Demo/example.png)
 
